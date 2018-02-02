@@ -1,15 +1,15 @@
 jobs:
-  - name: rituraj-1-1
+  - name: rituraj-1-1-x
     type: manifest
     steps:
-      - IN: box-nginx-1-1
+      - IN: box-nginx-1-1-x
         
-  - name: runSh-job
+  - name: runSh-job-x
     type: runSh
     steps:
-      - IN: gitRepo-resource
+      - IN: gitRepo-resource-x
         showBuildStatus: true
-      - IN: rituraj-1-1
+      - IN: rituraj-1-1-x
       - TASK:
         - script: echo 'start runSh hello'
         - script: printenv
@@ -22,12 +22,12 @@ jobs:
       - script: echo "Hello from always"
       - script: echo ":|"
       
-  - name: runSh-job-2
+  - name: runSh-job-2-x
     type: runSh
     steps:
-      - IN: gitRepo-resource
+      - IN: gitRepo-resource-x
         showBuildStatus: true
-      - IN: rituraj-1-1
+      - IN: rituraj-1-1-x
       - TASK:
         - script: echo 'start runSh hello 2'
         - script: printenv
